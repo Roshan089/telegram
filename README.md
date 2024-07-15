@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+This is a responsive replica of the Telegram messaging application built using ReactJS and Material UI. It displays chats and messages fetched from provided API endpoints.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
 
-## Available Scripts
+Side navigation bar with a hamburger menu and search functionality.
+List of chats displayed in the sidebar.
+Real-time chat and message updates using data from API endpoints.
+Utilizes Material UI for styling and components.
+Dark theme integration.
 
-In the project directory, you can run:
 
-### `npm start`
+Technologies Used
+ReactJS: JavaScript library for building user interfaces.
+Material UI: React components for faster and easier web development.
+Axios: Promise-based HTTP client for the browser and Node.js.
+Tailwind CSS: Utility-first CSS framework for rapid UI development.
+React Icons: Include popular icons in your React projects easily.
+Getting Started
+Prerequisites
+Node.js (>=14.x)
+npm (>=6.x) or yarn (>=1.x)
+Installation
+Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+git clone https://github.com/your-username/telegram-replica.git
+cd telegram-replica
+Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm install
+or
 
-### `npm test`
+bash
+Copy code
+yarn install
+Running the Application
+Start the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm start
+or
 
-### `npm run build`
+bash
+Copy code
+yarn start
+Open your browser and navigate to http://localhost:3000.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Folder Structure
+java
+Copy code
+telegram-replica/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Sidebar.jsx
+│   │   ├── Messagelist.jsx
+│   │   ├── SwitchButton.jsx
+│   │   └── ...
+│   ├── App.jsx
+│   ├── index.js
+│   ├── App.css
+│   └── ...
+├── package.json
+└── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+API Endpoints
+Get All Chats
+URL: https://devapi.beyondchats.com/api/get_all_chats?page=1
+Method: GET
+Description: Returns a list of chats (paginated API).
+Get Chat Messages
+URL: https://devapi.beyondchats.com/api/get_chat_messages?chat_id=3888
+Method: GET
+Description: Returns a list of messages given a chat ID.
+Components
+Sidebar
+Contains the search bar and list of chats.
+Fetches chat data from the API and passes it to the Messagelist component.
+Messagelist
+Receives chat data as props and displays the list of messages.
+SwitchButton
+A toggle switch component used within the sidebar.
+Styling
+The application uses Tailwind CSS for custom styling along with Material UI components.
+Custom styles can be found in App.css.
+Deployment
+To deploy the project publicly, follow the steps for deploying a React application on your preferred platform (e.g., Netlify, Vercel, GitHub Pages).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgements
+Inspired by the Telegram messaging application.
+Built using ReactJS and Material UI.
